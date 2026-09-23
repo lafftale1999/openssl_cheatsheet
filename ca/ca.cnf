@@ -1,0 +1,15 @@
+[req]
+prompt             = no
+distinguished_name = dn
+x509_extensions    = v3_ca
+
+[dn]
+C  = SE
+O  = Example AB
+CN = Example AB Internal CA
+
+[v3_ca]
+basicConstraints       = critical, CA:TRUE, pathlen:0
+keyUsage               = critical, keyCertSign, cRLSign
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid:always
